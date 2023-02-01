@@ -15,7 +15,7 @@ return new class extends Migration {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string("agency", 32);
-            $table->tinyInteger("carriages_number");
+            $table->tinyInteger("carriages_number")->unsigned();
             $table->string("code", 10)->unique();
             $table->boolean("in_time")->default(true);
             $table->boolean("cancelled")->default(false);

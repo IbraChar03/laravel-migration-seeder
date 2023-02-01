@@ -14,13 +14,13 @@ return new class extends Migration {
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
-            $table->integer("price_person");
+            $table->integer("price_person")->unsigned();
             $table->string("place");
             $table->string("code", 10)->unique();
             $table->text("description");
             $table->date("departure_date");
             $table->date("arrival_date");
-            $table->tinyInteger("vote")->nullable();
+            $table->tinyInteger("vote")->nullable()->unsigned();
             $table->timestamps();
         });
     }
