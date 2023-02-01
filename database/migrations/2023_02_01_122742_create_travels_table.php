@@ -16,11 +16,11 @@ return new class extends Migration {
             $table->id();
             $table->integer("price_person");
             $table->string("place");
-            $table->string("code");
+            $table->string("code", 10)->unique();
             $table->text("description");
             $table->date("departure_date");
             $table->date("arrival_date");
-            $table->tinyInteger("vote");
+            $table->tinyInteger("vote")->nullable();
             $table->timestamps();
         });
     }

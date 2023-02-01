@@ -14,4 +14,5 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', [MainController::class, "home"]);
+Route::get('/', [MainController::class, "trains"]);
+Route::get('/travels', [MainController::class, "travels"]);
