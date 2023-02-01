@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
-            $table->integer("price_person")->unsigned();
+            $table->integer("price_per_person")->unsigned();
             $table->string("place");
             $table->string("code", 10)->unique();
             $table->text("description");
